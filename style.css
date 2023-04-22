@@ -1,0 +1,74 @@
+.container {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.center_bar {
+    padding-left: 25%;
+    padding-right: 25%;
+}
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.lead {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    color: white;
+}
+
+nav, footer {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.section_padding {
+    padding-top: 3em;
+    padding-bottom: 0;
+    margin-top: 0;
+}
+
+.icon-button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.icon-button:hover {
+    transform: scale(1.1);
+}
+
+.icon-button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-button img {
+    margin: 0;
+    padding: 0;
+    height: 40px;
+    width: 40px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.5em;
+}
