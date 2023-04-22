@@ -24,6 +24,13 @@ ul {
     padding: 0;
 }
 
+.service-list li::before {
+    content: "\25CF"; /* Unicode character for solid circle */
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 12px;
+}
+
 footer {
     color: white;
 }
@@ -35,8 +42,8 @@ nav, footer {
     padding-right: 0;
 }
 
-.section_padding {
-    padding-top: 3em;
+section {
+    padding-top: 2em;
     padding-bottom: 0;
     margin-top: 0;
 }
@@ -68,7 +75,34 @@ nav, footer {
 
 .button-group {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
-    padding-top: 0.5em;
+    padding-top: 0.2em;
+}
+
+.publication-links {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.publication-links i{
+    width: 30px;
+    height: 30px;
+    filter: grayscale(1) brightness(0);
+    display: inline-block;
+    vertical-align:baseline;
+}
+
+.publication-links a *{
+    width: 24px;
+    height: 24px;
+    filter: grayscale(1) brightness(0);
+    display: inline-block;
+    vertical-align:center;
+}
+
+.publication-links a{
+    margin-right: 10px;
 }

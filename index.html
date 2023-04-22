@@ -7,8 +7,10 @@
   <title>Zhengwentai SUN's Homepage</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" href="wentai.ico">
+  <link rel="shortcut icon" href="assets/website_icon.svg">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DB33G935YG"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -30,11 +32,14 @@
       <li class="nav-item">
         <a class="nav-link" href="#about" style="color: white">About</a>
       </li>
-<!--      <li class="nav-item">-->
-<!--        <a class="nav-link" href="#research" style="color: white">Research</a>-->
-<!--      </li>-->
       <li class="nav-item">
         <a class="nav-link" href="#publications" style="color: white">Publications</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#services" style="color: white">Service</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#services" style="color: white">Projects</a>
       </li>
     </ul>
   </div>
@@ -46,10 +51,24 @@
     <h2 style="font-family: 'Oswald', sans-serif; font-size: 32px;">Zhengwentai SUN</h2>
     <div class="row">
       <div class="col-md-4 mb-4 mb-md-0">
-        <img src="wentai.jpg" alt="Wentai Photo"
+        <img src="assets/wentai.jpg" alt="Wentai Photo"
              class="img-thumbnail rounded-circle mx-auto d-block img-fluid"
              style="border-radius: 50%;">
-        <div class="button-group text-center">
+      </div>
+      <div class="col-md-8">
+        <p class="lead">I am Zhengwentai SUN (孙正文泰), a second-year MPhil student at Hong Kong
+          Polytechnic University, supervised by Prof. Tracy Mok. I completed my Bachelor's degree
+          at the University of Electronic Science and Technology of China. My current
+          research focuses on generative models and their applications in the fashion domain. </p>
+        <div class="button-group text-left">
+          <button class="icon-button">
+            <a href="mailto:zhengwt.sun@connect.polyu.com" target="_blank">
+              <img src="assets/email.svg"
+                   alt="email icon"
+                   height="34"
+                   width="34">
+            </a>
+          </button>
           <button class="icon-button">
             <a href="https://scholar.google.com/citations?user=S47VWNoAAAAJ" target="_blank">
               <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v5.8.0/icons/googlescholar.svg"
@@ -66,37 +85,42 @@
           </button>
         </div>
       </div>
-      <div class="col-md-8">
-        <p class="lead">I am Zhengwentai SUN (孙正文泰), a second-year MPhil student at Hong Kong
-          Polytechnic University. I completed my Bachelor's degree in Automation Engineering
-          at the University of Electronic Science and Technology of China. My current
-          research focuses on generative models and their applications in the fashion domain,
-          under the supervision of Prof. Tracy Mok. </p>
-        <p class="lead">
-          <b>Email: zhengwt.sun at connect.polyu.hk</b>
-        </p>
-      </div>
     </div>
   </section>
-
-<!--  <section id="research" class="section_padding">-->
-<!--    <h2>Research Interests</h2>-->
-<!--    <ul>-->
-<!--      <li>Computer Vision</li>-->
-<!--      <li>Generative Adversarial Networks</li>-->
-<!--      <li>Diffusion Models</li>-->
-<!--    </ul>-->
-<!--  </section>-->
 
   <section id="publications" class="section_padding">
     <h2>Publications</h2>
     <ul>
-      <li>Lei, W., Mei, H., <b>Sun, Z.</b>, Ye, S., Gu, R., Wang, H., ... & Wang, G. (2021). Automatic segmentation of organs-at-risk from head-and-neck CT using separable convolutional neural network with hard-region-weighted loss. Neurocomputing, 442, 184-199.</li>
-      <li>Mei, H., Lei, W., Gu, R., Ye, S., <b>Sun, Z.</b>, Zhang, S., & Wang, G. (2021). Automatic segmentation of gross target volume of nasopharynx cancer using ensemble of multiscale deep neural networks with spatial attention. Neurocomputing, 438, 211-222.</li>
+      <li>Lei, W., Mei, H., <b>Sun, Z.</b>, Ye, S., Gu, R., Wang, H., ... & Wang, G. (2021). Automatic segmentation of organs-at-risk from head-and-neck CT using separable convolutional neural network with hard-region-weighted loss. Neurocomputing, 442, 184-199.
+        <div class="publication-links">
+          <a href="https://github.com/HiLab-git/SepNet" target="_blank">
+            <img src="assets/github-original.svg" alt="GitHub icon" > Github</a>
+          <a href="https://arxiv.org/abs/2102.01897" target="_blank">
+            <img src="assets/arxiv.svg" alt="arxiv icon" > Arxiv</a>
+        </div>
+      </li>
+      <li>Mei, H., Lei, W., Gu, R., Ye, S., <b>Sun, Z.</b>, Zhang, S., & Wang, G. (2021). Automatic segmentation of gross target volume of nasopharynx cancer using ensemble of multiscale deep neural networks with spatial attention. Neurocomputing, 438, 211-222.
+        <div class="publication-links">
+          <a href="https://github.com/HiLab-git/Head-Neck-GTV">
+            <img src="assets/github-original.svg"> Github
+          </a>
+          <a href="https://arxiv.org/abs/2101.11254">
+            <img src="assets/arxiv.svg"> Arxiv
+          </a>
+        </div>
+      </li>
     </ul>
     <div id="publication-list"></div>
   </section>
 
+  <section id="services">
+    <h2>Service</h2>
+    <ul class="service-list">
+      <li>
+        Teaching Assistant for ITC446XE - MOBILE APP DESIGN FOR FASHION
+      </li>
+    </ul>
+  </section>
 </div>
 
 <footer class="bg-dark text-white py-3" >
