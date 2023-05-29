@@ -1,11 +1,38 @@
 .container {
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .center_bar {
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .center_bar {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+}
+
+/* 默认情况下，图片宽度 */
+.img-thumbnail {
+    width: 100%;
+    max-width: 100%; /* 这一行确保图片不会超出其容器的宽度 */
+}
+
+/* 当屏幕尺寸小于600px时 */
+@media screen and (max-width: 600px) {
+    /* 图片宽度为屏幕宽度的50%，并且居中 */
+    .img-thumbnail {
+        width: 50%;
+        margin: 0 auto; /* 这一行使图片在其容器中居中 */
+    }
 }
 
 h2 {
@@ -43,10 +70,53 @@ nav, footer {
     padding-right: 0;
 }
 
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
 section {
     padding-top: 2em;
     padding-bottom: 0;
     margin-top: 0;
+}
+
+table tr {
+    display: flex;
+    padding-top: 10px;
+}
+
+table tr td:first-child {
+    flex: 0 0 30%;
+    display: flex;
+    align-items: center; /*img vertically aligned*/
+}
+
+table tr td:nth-child(2) {
+    flex: 1;
+    padding-left: 10px;
+}
+
+/*!* set img width to whole td width *!*/
+table tr td img {
+    width: 100%;
+    max-width: 100%; /* no overflow */
+}
+
+/* when screen width is less than 600px */
+@media screen and (max-width: 600px) {
+    /* vertically stack td */
+    table tr {
+        display: block;
+    }
+    table tr td {
+        display: block;
+        width: 100%;
+    }
+
+    table tr td img {
+        width: 60%;
+        margin: 0 auto; /* set img center */
+    }
 }
 
 .icon-button {
@@ -79,6 +149,12 @@ section {
     justify-content: left;
     align-items: center;
     padding-top: 0.2em;
+}
+
+@media screen and (max-width: 600px) {
+    .button-group {
+        justify-content: center;
+    }
 }
 
 .publication-links {
