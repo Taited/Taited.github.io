@@ -4,9 +4,10 @@
 }
 
 .center_bar {
-    padding-left: 25%;
-    padding-right: 25%;
+    padding-left: 15%;
+    padding-right: 15%;
 }
+
 h2 {
     font-size: 2rem;
     font-weight: bold;
@@ -78,6 +79,11 @@ section {
     justify-content: left;
     align-items: center;
     padding-top: 0.2em;
+}
+
+.publication-img {
+    width: 150px;
+    /*height: 180px;*/
 }
 
 .publication-links {
