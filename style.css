@@ -81,11 +81,6 @@ section {
     padding-top: 0.2em;
 }
 
-.publication-img {
-    width: 150px;
-    /*height: 180px;*/
-}
-
 .publication-links {
     display: flex;
     justify-content: flex-start;
