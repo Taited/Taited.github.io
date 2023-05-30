@@ -61,32 +61,30 @@
 
 <h3 style="text-align: center">
   CoDE-GAN: Content Decoupling and Enhancement GAN <br>
-  for Sketch-Controlled Flexible Fashion Editing.
+  for Sketch-Controlled Flexible Fashion Editing
 </h3>
 
 <div class="container" style="text-align: center">
-  <div class="row">
-    <div class="col-md-6">
-        <b>Zhengwentai Sun</b> <br>
-        The Hong Kong Polytechnic University <br>
-        Hong Kong SAR, China <br>
-        zhengwt.sun@connect.polyu.hk
+  <div class="row" style="font-size: x-small;">
+    <div class="col-md-3">
+      <b>Zhengwentai Sun</b> <br>
+      The Hong Kong Polytechnic University <br>
+      Hong Kong SAR, China <br>
+      zhengwt.sun@connect.polyu.hk
     </div>
-    <div class="col-md-6">
+    <div class="col-md-3">
       <b>Yanghong Zhou</b> <br>
       The Hong Kong Polytechnic University <br>
       Hong Kong SAR, China <br>
       yanghong.zhou@connect.polyu.hk
     </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-3">
       <b>Honghong He</b> <br>
       The Hong Kong Polytechnic University <br>
       Hong Kong SAR, China <br>
       honghongvicky.he@connect.polyu.hk
     </div>
-    <div class="col-md-6">
+    <div class="col-md-3">
       <b>P. Y. Mok</b> <br>
       The Hong Kong Polytechnic University <br>
       Hong Kong SAR, China <br>
@@ -94,10 +92,37 @@
     </div>
   </div>
 
-<!--  <h3-->
-  <h3 style="text-align: left">Demo</h3>
-  Please visit our online demo at <a href="https://sun-zhengwt.com/code-gan/" target="_blank"> Here</a>.<br>
+  <h4 style="text-align: left; margin-top: 10px">Demo</h4>
+  <p>Please visit our online demo at <a href="https://sun-zhengwt.com/code-gan/" target="_blank">
+    <b>here</b></a>.</p>
   <img src="assets/code-gan/demo.gif" alt="GIF Image" style="width: 80%">
+
+  <h4 style="text-align: left; margin-top: 10px">Abstract</h4>
+  <img src="assets/code-gan/flexible-editing.png" alt="Flexible Editing" style="width: 80%">
+  <p style="text-align: left; font-size: small"> Despite recent advances in image editing technologies, such as
+    generative adversarial networks (GANs), the challenge of enabling flexible and iterative
+    modifications of image content remains, particularly within the fashion industry.
+    Fashion image editing requires nuanced modifications in color and texture, a feat which
+    current methods often fall short of achieving. In this paper, we introduce CoDE-GAN, a
+    novel method that allows for flexible image content editing guided by sketches, while
+    ensuring the generation of result images with consistent colors and textures.
+    The core of our proposed solution lies in the decoupling of content and texture
+    representation, a strategy aimed at overcoming the reconstruction challenges posed by
+    sketch-contoured content regions. This is achieved through the integration of a content
+    decoupling module into CoDE-GAN. This module pre-processes inputs with contour-guidance
+    and appearance-guidance, transforming the guidance into separate content and texture
+    representations. For further enhancement of color consistency and texture refinement, we
+    employ a content enhancement module. This module, applied to the decoder, computes a
+    content response map and uses cosine similarity to constrain it to a gray image. As a
+    result, CoDE-GAN accomplishes coarse-to-fine results in a single stage, enhancing both
+    the editing flexibility and the quality of the generated images. Through extensive
+    experiments conducted on three diverse datasets, including the fashion human ATR dataset,
+    the garment-based dataset, and a scene dataset, we demonstrate that CoDE-GAN outperforms
+    existing state-of-the-art methods. This paper, therefore, represents a significant step
+    forward in the quest for advanced, nuanced, and flexible image editing methodologies.
+  </p>
+
+
 </div>
 
 
