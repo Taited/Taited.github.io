@@ -99,27 +99,29 @@
 
   <h4 style="text-align: left; margin-top: 10px">Abstract</h4>
   <img src="assets/code-gan/flexible-editing.png" alt="Flexible Editing" style="width: 80%">
-  <p style="text-align: left; font-size: small"> Despite recent advances in image editing technologies, such as
-    generative adversarial networks (GANs), the challenge of enabling flexible and iterative
-    modifications of image content remains, particularly within the fashion industry.
-    Fashion image editing requires nuanced modifications in color and texture, a feat which
-    current methods often fall short of achieving. In this paper, we introduce CoDE-GAN, a
-    novel method that allows for flexible image content editing guided by sketches, while
-    ensuring the generation of result images with consistent colors and textures.
-    The core of our proposed solution lies in the decoupling of content and texture
-    representation, a strategy aimed at overcoming the reconstruction challenges posed by
-    sketch-contoured content regions. This is achieved through the integration of a content
-    decoupling module into CoDE-GAN. This module pre-processes inputs with contour-guidance
-    and appearance-guidance, transforming the guidance into separate content and texture
-    representations. For further enhancement of color consistency and texture refinement, we
-    employ a content enhancement module. This module, applied to the decoder, computes a
-    content response map and uses cosine similarity to constrain it to a gray image. As a
-    result, CoDE-GAN accomplishes coarse-to-fine results in a single stage, enhancing both
-    the editing flexibility and the quality of the generated images. Through extensive
-    experiments conducted on three diverse datasets, including the fashion human ATR dataset,
-    the garment-based dataset, and a scene dataset, we demonstrate that CoDE-GAN outperforms
-    existing state-of-the-art methods. This paper, therefore, represents a significant step
-    forward in the quest for advanced, nuanced, and flexible image editing methodologies.
+  <p style="text-align: left; font-size: small">
+    Advancements in image editing technologies, such as generative adversarial networks (GANs),
+    have introduced efficient editing techniques using text descriptions, semantic segmentation,
+    and reference style images. However, the flexibility and iterative modifications needed for
+    complex tasks like fashion image editing remain a challenge for existing methodologies. To
+    address this, we propose CoDE-GAN, a novel approach for flexible image content editing using
+    sketches. This method generates images with consistent colors and textures by uniquely
+    decoupling the image content into separate structure and texture representations. This
+    decoupling effectively addresses the difficulty in reconstructing content regions outlined by
+    sketches due to its sparsity.
+
+    In our approach, a content decoupling block preprocesses inputs under structure-guidance and
+    texture-guidance, transforming these inputs into their respective structure and texture
+    representations. To minimize artifacts and improve texture consistency with the original image,
+    a content enhancement module is applied in the decoder stage. This module computes a content
+    response map and aligns it to a grey image using cosine similarity, enabling CoDE-GAN to achieve
+    coarse-to-fine results in a single stage.
+
+    Through extensive evaluations on four datasets – a fashion-centric human ATR dataset, two
+    garment-based dataset, and a scene dataset (LSUN outdoor church), CoDE-GAN demonstrates its
+    superiority over state-of-the-art methods in terms of image quality and editing flexibility.
+    Our findings show that CoDE-GAN offers a promising solution for advanced image editing tasks,
+    specifically in the fashion industry where flexible and iterative modifications are crucial.
   </p>
 
 
