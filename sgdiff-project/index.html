@@ -86,7 +86,7 @@
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="static/pdfs/SGDiff A Style Guided Diffusion Model for Fashion Synthesis.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -97,7 +97,7 @@
 
                     <!-- Supplementary PDF link -->
                     <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      <a href="static/pdfs/Supplementary.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fas fa-file-pdf"></i>
@@ -108,7 +108,7 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/taited/sgdiff" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -118,7 +118,7 @@
                 </span>
 
                 <!-- ArXiv abstract Link -->
-                <span class="link-block">
+                <!-- <span class="link-block">
                   <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -126,7 +126,7 @@
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span>
+              </span> -->
             </div>
           </div>
         </div>
@@ -174,28 +174,36 @@
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item">
           <!-- Your image here -->
-          <img src="static/images/comparison.png" alt="MY ALT TEXT"/>
+          <img src="static/images/comparison.png" style="display: block;
+          margin-left: auto;
+          margin-right: auto;" alt="MY ALT TEXT"/>
           <h2 class="subtitle has-text-centered">
             Qualitative comparison of SGDiff with state-of-the-art (SOTA) approaches. The 2nd and 3rd rows illustrate the results of CLIP-based methods of VQGAN-CLIP and FuseDream, while the 4th and 5th rows illustrate the results of diffusion-based methods of LDM and GLIDE. The 6th row illustrates SGDiff's ability to incorporate style images (the 7th row) into text conditions (the 1st row), successfully synthesizing garments with the desired textures.
           </h2>
         </div>
         <div class="item">
         <!-- Your image here -->
-        <img src="static/images/portfolio/Slide1.png" alt="MY ALT TEXT"/>
+        <img src="static/images/portfolio/Slide1.png" style="display: block;
+        margin-left: auto;
+        margin-right: auto;" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
           More results (1).
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/portfolio/Slide2.png" alt="MY ALT TEXT"/>
+        <img src="static/images/portfolio/Slide2.png" style="display: block;
+        margin-left: auto;
+        margin-right: auto;" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
           More results (2).
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/portfolio/Slide3.png" alt="MY ALT TEXT"/>
+        <img src="static/images/portfolio/Slide3.png" style="display: block;
+        margin-left: auto;
+        margin-right: auto;" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
           More results (3).
        </h2>
@@ -217,7 +225,9 @@
           <h2 class="title is-3">Methods</h2>
         </div>
         <div style="text-align: center;">
-          <img src="static/images/methods.png">
+          <img src="static/images/methods.png" style="display: block;
+          margin-left: auto;
+          margin-right: auto; width: 90%;">
         </div>
         <h3 class="subtitle has-text-centered">
           The proposed Style-Guided Diffusion Model (SGDiff) network (a) an overview and (b) detail model: SGDiff takes two inputs, a text condition (c<sub>t</sub>) for garment attributes and a style condition (c<sub>s</sub>) for style guidance, and leverages the Skip Cross-Attention (SCA) module and a pretrained CLIP image encoder for efficient training and resource utilization.
@@ -264,14 +274,25 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@inproceedings{zhengwt2023sgdiff,
-  title={{SGDiff: A Style-Guided Diffusion Model for Fashion Synthesis}},
-  author={Sun, Zhengwentai and Zhou, Yanghong and He, Honghong and Mok, P. Y.},
-  booktitle={Proceedings of the ACM International Conference on Multimedia},
-  year={2023}
-}</code></pre>
+      <pre><code>
+      @inproceedings{10.1145/3581783.3613806,
+        author = {Sun, Zhengwentai and Zhou, Yanghong and He, Honghong and Mok, P. Y.},
+        title = {SGDiff: A Style-Guided Diffusion Model for Fashion Synthesis},
+        year = {2023},
+        isbn = {979-8-4007-0108-5/23/10},
+        publisher = {Association for Computing Machinery},
+        address = {New York, NY, USA},
+        url = {https://doi.org/10.1145/3581783.3613806},
+        doi = {10.1145/3581783.3613806},
+        booktitle = {Proceedings of the 31th ACM International Conference on Multimedia},
+        numpages = {10},
+        keywords = {fashion synthesis, style guidance, text-to-image, denoising diffusion probabilistic models},
+        location = {Ottawa, ON, Canada},
+        series = {MM '23}
+        }
+      </code></pre>
     </div>
-</section>
+  </section>
 <!--End BibTex citation -->
 
 
@@ -291,6 +312,9 @@
   </div>
 </footer>
 
+<script>
+  document.getElementById("currentYear").innerText = new Date().getFullYear();
+</script>
 <!-- Statcounter tracking code -->
 
 <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
