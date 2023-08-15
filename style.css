@@ -164,22 +164,6 @@ table tr td img {
     margin-bottom: 15px;
 }
 
-.publication-links i{
-    width: 30px;
-    height: 30px;
-    filter: grayscale(1) brightness(0);
-    display: inline-block;
-    vertical-align:baseline;
-}
-
-.publication-links a *{
-    width: 24px;
-    height: 24px;
-    filter: grayscale(1) brightness(0);
-    display: inline-block;
-    vertical-align:center;
-}
-
 .publication-links a{
     margin-right: 10px;
 }

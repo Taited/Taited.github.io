@@ -62,7 +62,9 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">CoDE-GAN: Content Decouple & Enhancement GAN for Flexible Fashion Editing</h1>
+            <h1 class="title is-1 publication-title">
+              CoDE-GAN: Content Decoupled and Enhanced
+              GAN for Sketch-guided Flexible Fashion Editing</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -151,7 +153,25 @@
         <div class="content has-text-justified">
           <img src="static/images/fig 1 concept.png">
           <p>
-            Advancements in image editing technologies, such as generative adversarial networks (GANs), have introduced efficient editing techniques using text descriptions, semantic segmentation, and reference style images. However, the flexibility and iterative modifications needed for complex tasks like fashion image editing remain a challenge for existing methodologies. To address this, we propose CoDE-GAN, a novel approach for flexible image content editing using sketches. This method generates images with consistent colors and textures by uniquely decoupling the image content into separate structure and texture representations. This decoupling effectively addresses the difficulty in reconstructing content regions outlined by sketches due to its sparsity. In our approach, a content decoupling block preprocesses inputs under structure-guidance and texture-guidance, transforming these inputs into their respective structure and texture representations. To minimize artifacts and improve texture consistency with the original image, a content enhancement module is applied in the decoder stage. This module computes a content response map and aligns it to a grey image using cosine similarity, enabling CoDE-GAN to achieve coarse-to-fine results in a single stage. Through extensive evaluations on four datasets – a fashion-centric human ATR dataset, two garment-based dataset, and a scene dataset (LSUN outdoor church), CoDE-GAN demonstrates its superiority over state-of-the-art methods in terms of image quality and editing flexibility. Our findings show that CoDE-GAN offers a promising solution for advanced image editing tasks, specifically in the fashion industry where flexible and iterative modifications are crucial.
+            Rapid advancements in generative models, including generative adversarial networks
+            (GANs) and diffusion models, have made possible of automated efficient
+            <i>image editing</i> through the use of text descriptions, semantic segmentation,
+            and/or reference style images. Nevertheless, in the fashion industry, the task of
+            image editing requires more flexible, and typically iterative, modifications to the
+            image content, while existing methods struggle to achieve. This paper proposes a new
+            model called Content Decoupled and Enhanced GAN (CoDE-GAN), which is formulated and
+            trained for the task of image reconstruction, more specifically, image inpainting,
+            with sketch-guidance. Through this proxy task, the trained model can be used for
+            flexible image editing, generating new images with consistent colours and required
+            textures based on sketch inputs. In this new model, a content decoupling block is
+            introduced including specially designed dual encoders, which pre-process inputs and
+            further transformed into separated structure and texture representations. Moreover,
+            a content enhancing module is designed and applied to the decoder, improving the
+            colour consistency and refining the texture of the generated images. The proposed
+            CoDE-GAN can achieve coarse-to-fine results in one single stage. Extensive experiment
+            on three datasets, covering human, garment-only and scene images, show that CoDE-GAN
+            outperforms other state-of-the-art methods in terms of both generated image quality
+            and editing flexibility.
           </p>
         </div>
       </div>
