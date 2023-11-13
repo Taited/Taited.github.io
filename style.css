@@ -167,3 +167,18 @@ table tr td img {
 .publication-links a{
     margin-right: 10px;
 }
+
+.service-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .experience_event {
+    flex-grow: 1; 
+    text-align: left;
+  }
+  
+  .year {
+    font-weight: bold;
+  }
