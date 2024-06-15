@@ -1,6 +1,9 @@
 .container {
-    padding-left: 10%;
-    padding-right: 10%;
+    max-width: 1300px; /* 增大最大宽度 */
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .center_bar {
@@ -8,7 +11,7 @@
     padding-right: 10%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 2560px) {
     .container {
         padding-left: 10%;
         padding-right: 10%;
