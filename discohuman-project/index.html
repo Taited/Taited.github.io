@@ -82,10 +82,10 @@
                   </span>
                   <br>
                   <span class="author-block">
-                    <a href="https://scholar.google.com/citations?user=-LATi7MAAAAJ&hl=en" target="_blank">Yihao Zhi</a>,
+                    <a href="https://scholar.google.com/citations?user=-LATi7MAAAAJ" target="_blank">Yihao Zhi</a>,
                   </span>
                   <span class="author-block">
-                    <a href="https://scholar.google.com.hk/citations?user=tcRMmRkAAAAJ&hl=zh-CN" target="_blank">Hongjie Liao</a>,
+                    <a href="https://scholar.google.com.hk/citations?user=tcRMmRkAAAAJ" target="_blank">Hongjie Liao</a>,
                   </span>
                    <span class="author-block">
                     <a href="https://kevinlee09.github.io/" target="_blank">Chenghong Li</a>,
@@ -94,7 +94,7 @@
                     <a href="https://sse.cuhk.edu.cn/en/faculty/cuishuguang" target="_blank">Shuguang Cui</a>,
                   </span>
                   <span class="author-block">
-                    <a href="https://sse.cuhk.edu.cn/en/faculty/hanxiaoguang" target="_blank">Xiaoguang Han</a> <sup>*</sup>
+                    <a href="https://gaplab.cuhk.edu.cn/" target="_blank">Xiaoguang Han</a> <sup>*</sup>
                   </span>
                   </div>
 
@@ -156,19 +156,17 @@
   </div>
 </section>
 
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <img src="static/images/.png">
-      <h2 class="subtitle has-text-centered">
-        TODO demo video.
-      </h2>
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video poster="" id="tree" autoplay controls muted loop height="100%">
+          <!-- Your video here -->
+          <source src="static/videos/discohuman.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
     </div>
-  </div>
-</section>
-<!-- End teaser video -->
+  </section>
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -177,7 +175,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>
+          <p class="is-6">
             Achieving fine-grained controllability in human image synthesis is a
             long-standing challenge in computer vision. Existing methods primarily
             focus on either facial synthesis or near-frontal body generation, with
@@ -220,9 +218,54 @@
         </p>
       </div>
     </div>
+
+    <h2 class="title is-4 has-text-centered" style="margin-top: 20px">More challenging poses.</h2>
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="static/images/supplementary_more_results_poses.png">
+      </div>
+    </div>
   </section>
 
-<!-- Image carousel -->
+<section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container  has-text-centered">
+        <h2 class="title is-3">Method</h2>
+      </div>
+      <div style="text-align: center; margin-top: 20pt; margin-bottom: 10pt">
+        <img src="static/images/fig2-stage-by-stage_250308.png" style="display: block;
+          margin-left: auto;
+          margin-right: auto; width: 80%;">
+      </div>
+      <p class="subtitle is-6" style="width: 80%; margin-left: 10%">
+        Overview of the proposed pipelines. (a) The end-to-end pipeline directly
+        synthesizes the final image from disentangled inputs, including a face
+        image, clothing images, and a pose map. (b) The stage-by-stage pipeline
+        decomposes the process into three steps: front-view synthesis with identity
+        and clothing control, back-view synthesis, and free-view synthesis under
+        the target pose and viewpoint. Both pipelines are implemented using DiscoHuman,
+        with details provided in below.
+      </p>
+
+      <div style="text-align: center; margin-top: 20pt; margin-bottom: 10pt">
+        <img src="static/images/fig3%20network_250308_v1.png" style="display: block;
+          margin-left: auto;
+          margin-right: auto; width: 80%;">
+      </div>
+      <p class="subtitle is-6" style="width: 80%; margin-left: 10%">
+        DiscoHuman model \( \varepsilon \) consists of a VisualDiT \( \varepsilon_V \) and a HumanDiT
+        \( \varepsilon_H \). The VisualDiT is responsible for encoding visual conditions,
+        with different input settings depending on the pipeline or stage in which DiscoHuman
+        is applied. The upper left blocks illustrate three possible input configurations.
+        In this figure, the active configuration corresponds to Stage 3, while the inactive
+        settings are indicated by grey dashed lines. To maintain simplicity, the denoising
+        timestep t is not shown in this figure.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
@@ -268,7 +311,7 @@
        </div>
       </div>
 
-      <p class="subtitle is-6">
+      <p class="subtitle is-6" style="margin-left: 5%">
         We compare our method against
         <a href="https://github.com/MooreThreads/Moore-AnimateAnyone" target="_blank">AA (AnimateAnyone)</a>,
         <a href="https://github.com/magic-research/magic-animate" target="_blank">MA (MagicAnimate)</a>,
@@ -280,49 +323,6 @@
 </div>
 </section>
 <!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-  <section class="hero is-small is-light">
-
-      <div class="hero-body">
-        <div class="container  has-text-centered">
-          <h2 class="title is-3">Method</h2>
-        </div>
-        <div style="text-align: center; margin-top: 20pt; margin-bottom: 10pt">
-          <img src="static/images/fig2-stage-by-stage_250308.png" style="display: block;
-          margin-left: auto;
-          margin-right: auto; width: 90%;">
-        </div>
-        <p class="subtitle is-6" style="width: 90%; margin-left: 5%">
-          Overview of the proposed pipelines. (a) The end-to-end pipeline directly
-          synthesizes the final image from disentangled inputs, including a face
-          image, clothing images, and a pose map. (b) The stage-by-stage pipeline
-          decomposes the process into three steps: front-view synthesis with identity
-          and clothing control, back-view synthesis, and free-view synthesis under
-          the target pose and viewpoint. Both pipelines are implemented using DiscoHuman,
-          with details provided in below.
-        </p>
-
-        <div style="text-align: center; margin-top: 20pt; margin-bottom: 10pt">
-          <img src="static/images/fig3%20network_250308_v1.png" style="display: block;
-          margin-left: auto;
-          margin-right: auto; width: 90%;">
-        </div>
-        <p class="subtitle is-6" style="width: 90%; margin-left: 5%">
-          DiscoHuman model \( \varepsilon \) consists of a VisualDiT \( \varepsilon_V \) and a HumanDiT
-          \( \varepsilon_H \). The VisualDiT is responsible for encoding visual conditions,
-          with different input settings depending on the pipeline or stage in which DiscoHuman
-          is applied. The upper left blocks illustrate three possible input configurations.
-          In this figure, the active configuration corresponds to Stage 3, while the inactive
-          settings are indicated by grey dashed lines. To maintain simplicity, the denoising
-          timestep t is not shown in this figure.
-        </p>
-
-      </div>
-  </section>
 
 <!--<section class="hero is-small is-light">-->
 <!--  <div class="hero-body">-->
