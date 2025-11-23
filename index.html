@@ -165,7 +165,7 @@
       <div class="project-content">
         <h3 class="project-title">Fogsight (雾象)</h3>
         <p class="project-description">
-          Fogsight is an AI agent and animation engine powered by Large Language Models (LLMs). Users input abstract concepts or words, and Fogsight transforms them into high-quality, vivid HTML animations. It features an intelligent orchestration system that automatically completes the entire creative workflow, from narration and visual elements to dynamic effects.
+          Fogsight is an LLM-powered AI agent that transforms abstract concepts into high-quality HTML animations, automatically orchestrating narration, visuals, and dynamic effects.
         </p>
         <div class="project-links">
           <a href='https://fogsight.ai' target="_blank" class="project-link">
@@ -174,6 +174,9 @@
           <a href='https://github.com/fogsightai/fogsight' target="_blank" class="project-link">
             <i class="fab fa-github"></i> Code
           </a>
+          <span class="github-stars" data-repo="fogsightai/fogsight">
+            <i class="fas fa-star"></i> <span class="star-count">-</span> <span class="star-label">Stars</span>
+          </span>
         </div>
       </div>
     </div>
@@ -193,6 +196,9 @@
           <a href='https://github.com/EmbraceAGI/LifeReloaded' target="_blank" class="project-link">
             <i class="fab fa-github"></i> Code
           </a>
+          <span class="github-stars" data-repo="EmbraceAGI/LifeReloaded">
+            <i class="fas fa-star"></i> <span class="star-count">-</span> <span class="star-label">Stars</span>
+          </span>
         </div>
       </div>
     </div>
@@ -364,7 +370,7 @@
   </section>
 
   <section id="experiences" class="section-padding">
-    <h2 class="section-title">Service</h2>
+    <h2 class="section-title">Services</h2>
     <div class="service-content">
       <p class="service-intro">Reviewer for the following conferences and journals:</p>
       <ul class="service-list">
@@ -482,6 +488,39 @@
       hideVisitorMap();
     }
   }, 5000);
+  
+  // Fetch GitHub stars for projects
+  function fetchGitHubStars() {
+    const starElements = document.querySelectorAll('.github-stars[data-repo]');
+    
+    starElements.forEach(function(element) {
+      const repo = element.getAttribute('data-repo');
+      const starCountElement = element.querySelector('.star-count');
+      
+      // Use GitHub API to fetch star count
+      fetch(`https://api.github.com/repos/${repo}`)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then(data => {
+          if (starCountElement) {
+            // Format number with commas for readability
+            starCountElement.textContent = data.stargazers_count.toLocaleString();
+          }
+        })
+        .catch(error => {
+          console.error(`Error fetching stars for ${repo}:`, error);
+          // Hide the star element if API fails
+          element.style.display = 'none';
+        });
+    });
+  }
+  
+  // Fetch stars when page loads
+  window.addEventListener('load', fetchGitHubStars);
 </script>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>

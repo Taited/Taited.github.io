@@ -388,19 +388,63 @@ a:hover {
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
-  background: var(--primary-color);
-  color: white;
+  background: var(--bg-secondary);
+  color: var(--primary-color);
   border-radius: 8px;
   font-weight: 500;
   transition: all 0.3s ease;
-  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
 }
 
 .project-link:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  background: var(--primary-color);
   color: white;
-  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+  border-color: var(--primary-color);
+}
+
+.github-stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--bg-secondary);
+  color: var(--primary-color);
+  border-radius: 8px;
+  font-weight: 500;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.github-stars i {
+  color: #fbbf24;
+  font-size: 1rem;
+}
+
+.github-stars .star-count {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.github-stars .star-label {
+  color: var(--primary-color);
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.github-stars:hover {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.github-stars:hover .star-count,
+.github-stars:hover .star-label {
+  color: white;
 }
 
 /* ===== Publication Cards ===== */
