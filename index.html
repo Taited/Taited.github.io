@@ -174,8 +174,8 @@
           <a href='https://github.com/fogsightai/fogsight' target="_blank" class="project-link">
             <i class="fab fa-github"></i> Code
           </a>
-          <span class="github-stars" data-repo="fogsightai/fogsight">
-            <i class="fas fa-star"></i> <span class="star-count">-</span> <span class="star-label">Stars</span>
+          <span class="github-stars" data-repo="fogsightai/fogsight" data-default="1876">
+            <i class="fas fa-star"></i> <span class="star-count">1876</span> <span class="star-label">Stars</span>
           </span>
         </div>
       </div>
@@ -196,8 +196,8 @@
           <a href='https://github.com/EmbraceAGI/LifeReloaded' target="_blank" class="project-link">
             <i class="fab fa-github"></i> Code
           </a>
-          <span class="github-stars" data-repo="EmbraceAGI/LifeReloaded">
-            <i class="fas fa-star"></i> <span class="star-count">-</span> <span class="star-label">Stars</span>
+          <span class="github-stars" data-repo="EmbraceAGI/LifeReloaded" data-default="684">
+            <i class="fas fa-star"></i> <span class="star-count">684</span> <span class="star-label">Stars</span>
           </span>
         </div>
       </div>
@@ -396,6 +396,9 @@
           <span class="service-name">IEEE TMC</span>
         </li>
         <li class="service-item">
+          <span class="service-name">IEEE TVCG</span>
+        </li>
+        <li class="service-item">
           <span class="service-name">Neurocomputing</span>
         </li>
       </ul>
@@ -495,7 +498,13 @@
     
     starElements.forEach(function(element) {
       const repo = element.getAttribute('data-repo');
+      const defaultStars = element.getAttribute('data-default');
       const starCountElement = element.querySelector('.star-count');
+      
+      // Set default value if available
+      if (defaultStars && starCountElement) {
+        starCountElement.textContent = parseInt(defaultStars).toLocaleString();
+      }
       
       // Use GitHub API to fetch star count
       fetch(`https://api.github.com/repos/${repo}`)
@@ -513,8 +522,7 @@
         })
         .catch(error => {
           console.error(`Error fetching stars for ${repo}:`, error);
-          // Hide the star element if API fails
-          element.style.display = 'none';
+          // Keep default value if API fails, don't hide the element
         });
     });
   }
